@@ -1,0 +1,36 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "CPython 3.11.9",
+  "startedAt": "2026-03-16T18:17:13.474363Z",
+  "program": "C:\\Users\\gayat\\OneDrive\\Desktop\\MyLab\\human-disease\\train.py",
+  "codePath": "train.py",
+  "codePathLocal": "train.py",
+  "email": "tve23cs061@cet.ac.in",
+  "root": "C:\\Users\\gayat\\OneDrive\\Desktop\\MyLab\\human-disease",
+  "host": "Gayathri",
+  "executable": "C:\\Users\\gayat\\OneDrive\\Desktop\\MyLab\\human-disease\\venv\\Scripts\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "269975810048",
+      "used": "223295672320"
+    }
+  },
+  "memory": {
+    "total": "16891633664"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal": "4294967296",
+      "cudaCores": 2048,
+      "architecture": "Ampere",
+      "uuid": "GPU-a7a8ab87-d4b2-c9aa-c3ab-ebd0ccfa4a39"
+    }
+  ],
+  "cudaVersion": "12.2",
+  "writerId": "c3scpzvwdv5ig3690c2ety0nfm48is5j"
+}

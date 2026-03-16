@@ -1,0 +1,20 @@
+Computing class weights (fast mode)...
+
+Epoch 1/50
+  0%|                                                                                                                                                 | 0/17 [00:00<?, ?it/s]C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\utils\data\dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 17/17 [01:33<00:00,  5.49s/it]
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\train.py", line 173, in <module>
+    main()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\train.py", line 140, in main
+    torch.save(model.state_dict(), "/workspace/best_model.pth")
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\serialization.py", line 976, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\serialization.py", line 838, in _open_zipfile_writer
+    return container(name_or_buffer)  # type: ignore[arg-type]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\serialization.py", line 802, in __init__
+    torch._C.PyTorchFileWriter(
+RuntimeError: Parent directory /workspace does not exist.

@@ -1,0 +1,22 @@
+Computing class weights (fast mode)...
+
+Epoch 1/50
+  0%|                                                                                                                                                 | 0/17 [00:00<?, ?it/s]C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\train.py:103: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 17/17 [01:05<00:00,  3.85s/it]
+Best model saved!
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\train.py", line 173, in <module>
+    main()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\train.py", line 151, in main
+    torch.save({
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\serialization.py", line 849, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\serialization.py", line 716, in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\venv\Lib\site-packages\torch\serialization.py", line 687, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Parent directory /workspace does not exist.

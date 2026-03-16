@@ -1,0 +1,21 @@
+2026-03-17 00:48:51,968 INFO    MainThread:23524 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-03-17 00:48:51,968 INFO    MainThread:23524 [wandb_setup.py:_flush():81] Configure stats pid to 23524
+2026-03-17 00:48:51,968 INFO    MainThread:23524 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-17 00:48:51,968 INFO    MainThread:23524 [wandb_init.py:setup_run_log_directory():717] Logging user logs to C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\wandb\run-20260317_004851-0j8hgq14\logs\debug.log
+2026-03-17 00:48:51,972 INFO    MainThread:23524 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to C:\Users\gayat\OneDrive\Desktop\MyLab\human-disease\wandb\run-20260317_004851-0j8hgq14\logs\debug-internal.log
+2026-03-17 00:48:51,972 INFO    MainThread:23524 [wandb_init.py:init():844] calling init triggers
+2026-03-17 00:48:51,972 INFO    MainThread:23524 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'batch_size': 32, 'learning_rate': 0.0001, 'model': 'convit_tiny', '_wandb': {}}
+2026-03-17 00:48:51,972 INFO    MainThread:23524 [wandb_init.py:init():892] starting backend
+2026-03-17 00:48:54,566 INFO    MainThread:23524 [wandb_init.py:init():895] sending inform_init request
+2026-03-17 00:48:54,612 INFO    MainThread:23524 [wandb_init.py:init():903] backend started and connected
+2026-03-17 00:48:54,614 INFO    MainThread:23524 [wandb_init.py:init():973] updated telemetry
+2026-03-17 00:48:54,621 INFO    MainThread:23524 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-17 00:48:56,810 INFO    MainThread:23524 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-17 00:48:57,587 INFO    MainThread:23524 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-17 00:48:57,588 INFO    MainThread:23524 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-17 00:48:57,588 INFO    MainThread:23524 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-17 00:48:57,589 INFO    MainThread:23524 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-17 00:48:57,619 INFO    MainThread:23524 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-17 00:51:43,032 INFO    wandb-AsyncioManager-main:23524 [service_client.py:_forward_responses():134] Reached EOF.
+2026-03-17 00:51:43,051 INFO    wandb-AsyncioManager-main:23524 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.
