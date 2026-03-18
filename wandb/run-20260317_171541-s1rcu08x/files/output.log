@@ -1,0 +1,19 @@
+Computing class weights (fast mode)...
+
+Epoch 1/50
+  0%|                                                                                                                                   | 0/17 [00:00<?, ?it/s]C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\utils\data\dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+ 29%|████████████████████████████████████▏                                                                                      | 5/17 [01:01<02:26, 12.22s/it]
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_unmasked.py", line 173, in <module>
+    main()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_unmasked.py", line 113, in main
+    loss.backward()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\_tensor.py", line 630, in backward
+    torch.autograd.backward(
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\autograd\__init__.py", line 364, in backward
+    _engine_run_backward(
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\autograd\graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

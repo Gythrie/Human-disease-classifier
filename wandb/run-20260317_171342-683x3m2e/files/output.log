@@ -1,0 +1,8 @@
+Computing class weights (fast mode)...
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_unmasked.py", line 173, in <module>
+    main()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_unmasked.py", line 58, in main
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ReduceLROnPlateau.__init__() got an unexpected keyword argument 'verbose'
