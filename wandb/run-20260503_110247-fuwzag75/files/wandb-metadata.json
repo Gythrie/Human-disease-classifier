@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.26200-SP0",
+  "python":  "CPython 3.11.9",
+  "startedAt":  "2026-05-03T05:32:47.461113Z",
+  "program":  "C:\\Users\\gayat\\OneDrive\\Desktop\\MyLab\\Human-disease-classifier\\train_masked.py",
+  "codePath":  "train_masked.py",
+  "codePathLocal":  "train_masked.py",
+  "git":  {
+    "remote":  "https://github.com/Gythrie/Human-disease-classifier.git",
+    "commit":  "ec996969a076d8bea244ef0c738cd8fc583e9f2c"
+  },
+  "email":  "tve23cs061@cet.ac.in",
+  "root":  "C:\\Users\\gayat\\OneDrive\\Desktop\\MyLab\\Human-disease-classifier",
+  "host":  "Gayathri",
+  "executable":  "C:\\Users\\gayat\\OneDrive\\Desktop\\MyLab\\Human-disease-classifier\\venv\\Scripts\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  12,
+  "gpu":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "269975810048",
+      "used":  "227033243648"
+    }
+  },
+  "memory":  {
+    "total":  "16891633664"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal":  "4294967296",
+      "cudaCores":  2048,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-a7a8ab87-d4b2-c9aa-c3ab-ebd0ccfa4a39"
+    }
+  ],
+  "cudaVersion":  "12.2",
+  "writerId":  "mhwxk2u78qgrbw5qq1q5apiow999z3k3"
+}

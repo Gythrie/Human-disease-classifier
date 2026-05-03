@@ -69,9 +69,10 @@ def main():
     print(f"\nOverall Test Accuracy (masked): {overall_acc:.4f}")
 
     cm = confusion_matrix(all_labels, all_preds)
+    cm_percent = cm.astype(float) / cm.sum(axis=1, keepdims=True) * 100  
 
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
+    sns.heatmap(cm_percent, annot=True, fmt=".1f", cmap="Blues",
                 xticklabels=class_names,
                 yticklabels=class_names)
 
@@ -80,9 +81,11 @@ def main():
     plt.title("Confusion Matrix")
     plt.tight_layout()
     plt.savefig("confusion_matrix_masked.png")
+    plt.savefig("confusion_matrix.svg", format="svg", bbox_inches="tight")
     plt.close()
 
     print("Confusion matrix saved as confusion_matrix_masked.png")
+    
 
     report = classification_report(
         all_labels,

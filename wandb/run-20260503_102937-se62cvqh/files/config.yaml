@@ -1,0 +1,65 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            jmxjp0mqdk5fkhosicmqbdjuxb945gbr:
+                codePath: train_masked.py
+                codePathLocal: train_masked.py
+                cpu_count: 8
+                cpu_count_logical: 12
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "269975810048"
+                        used: "217088802816"
+                email: tve23cs061@cet.ac.in
+                executable: C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Scripts\python.exe
+                git:
+                    commit: ec996969a076d8bea244ef0c738cd8fc583e9f2c
+                    remote: https://github.com/Gythrie/Human-disease-classifier.git
+                gpu: NVIDIA GeForce RTX 3050 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 2048
+                      memoryTotal: "4294967296"
+                      name: NVIDIA GeForce RTX 3050 Laptop GPU
+                      uuid: GPU-a7a8ab87-d4b2-c9aa-c3ab-ebd0ccfa4a39
+                host: Gayathri
+                memory:
+                    total: "16891633664"
+                os: Windows-10-10.0.26200-SP0
+                program: C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py
+                python: CPython 3.11.9
+                root: C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier
+                startedAt: "2026-05-03T04:59:37.233533Z"
+                writerId: jmxjp0mqdk5fkhosicmqbdjuxb945gbr
+        m: []
+        python_version: 3.11.9
+        t:
+            "1":
+                - 1
+                - 41
+                - 49
+                - 63
+            "2":
+                - 1
+                - 41
+                - 49
+                - 63
+            "3":
+                - 16
+            "4": 3.11.9
+            "5": 0.26.1
+            "8":
+                - 3
+            "12": 0.26.1
+            "13": windows-amd64
+batch_size:
+    value: 32
+epochs:
+    value: 35
+learning_rate:
+    value: 0.0001
+model:
+    value: convit_tiny

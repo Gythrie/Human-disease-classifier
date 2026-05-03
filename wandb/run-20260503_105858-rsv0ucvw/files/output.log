@@ -1,0 +1,40 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Computing class weights (fast mode)...
+Loading checkpoint...
+C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py:73: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path)
+Resuming from epoch 19
+
+Epoch 20/35
+  0%|                                                                                                                                   | 0/65 [00:00<?, ?it/s]C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py:99: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 65/65 [00:53<00:00,  1.22it/s]
+Loss: 0.0747 | Val Acc: 0.9747
+
+Epoch 21/35
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 65/65 [00:04<00:00, 14.03it/s]
+Loss: 0.0582 | Val Acc: 0.9789
+
+Epoch 22/35
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 65/65 [00:04<00:00, 15.23it/s]
+Loss: 0.0579 | Val Acc: 0.9662
+
+Epoch 23/35
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 65/65 [00:04<00:00, 14.61it/s]
+Loss: 0.0668 | Val Acc: 0.9789
+
+Epoch 24/35
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌         | 60/65 [00:05<00:00, 10.59it/s]
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py", line 160, in <module>
+    main()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py", line 103, in main
+    scaler.scale(loss).backward()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\autograd\__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\autograd\graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

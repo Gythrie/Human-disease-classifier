@@ -1,0 +1,37 @@
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_setup.py:_flush():81] Configure stats pid to 30120
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_init.py:setup_run_log_directory():723] Logging user logs to C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\wandb\run-20260503_102320-vfcm15m0\logs\debug.log
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\wandb\run-20260503_102320-vfcm15m0\logs\debug-internal.log
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_init.py:init():850] calling init triggers
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'batch_size': 32, 'learning_rate': 0.0001, 'model': 'convit_tiny', '_wandb': {}}
+2026-05-03 10:23:20,613 INFO    MainThread:30120 [wandb_init.py:init():898] starting backend
+2026-05-03 10:23:22,988 WARNING MainThread:30120 [wandb_init.py:init():1595] [no run ID] interrupted
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1586, in init
+    run = wi.init(run_settings, run_config, run_printer)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\wandb_init.py", line 900, in init
+    service = self._wl.ensure_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\wandb_setup.py", line 392, in ensure_service
+    self._connection = service_connection.connect_to_service(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\lib\service\service_connection.py", line 51, in connect_to_service
+    return _start_and_connect_service(asyncer, settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\lib\service\service_connection.py", line 66, in _start_and_connect_service
+    client = proc.token.connect(asyncer=asyncer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\lib\service\service_token.py", line 156, in connect
+    reader, writer = asyncer.run(
+                     ^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 137, in run
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "C:\Users\gayat\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 327, in wait
+    waiter.acquire()
+KeyboardInterrupt

@@ -1,0 +1,32 @@
+Computing class weights (fast mode)...
+Loading checkpoint...
+Traceback (most recent call last):
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py", line 160, in <module>
+    main()
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\train_masked.py", line 73, in main
+    checkpoint = torch.load(checkpoint_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 1570, in load
+    return _load(
+           ^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 2190, in _load
+    result = unpickler.load()
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\_weights_only_unpickler.py", line 541, in load
+    self.append(self.persistent_load(pid))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 2154, in persistent_load
+    typed_storage = load_tensor(
+                    ^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 2116, in load_tensor
+    wrap_storage = restore_location(storage, location)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 734, in default_restore_location
+    result = fn(storage, location)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 667, in _deserialize
+    device = _validate_device(location, backend_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gayat\OneDrive\Desktop\MyLab\Human-disease-classifier\venv\Lib\site-packages\torch\serialization.py", line 634, in _validate_device
+    raise RuntimeError(
+RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
