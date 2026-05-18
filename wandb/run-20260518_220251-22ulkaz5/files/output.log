@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Computing class weights (fast mode)...
+
+Epoch 1/35
+  0%|                                                                                                                                                    | 0/65 [00:00<?, ?it/s]

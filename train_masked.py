@@ -22,7 +22,7 @@ def main():
         project="human-disease-convit",
         resume="allow",
         config={
-            "epochs": 35,
+            "epochs": 50,
             "batch_size": 8,
             "learning_rate": 1e-4,
             "model": "convit_tiny"
@@ -90,6 +90,9 @@ def main():
         model.train()
         total_loss = 0
 
+        train_correct = 0
+        train_total = 0
+
         for images, labels in tqdm(train_loader):
 
             images, labels = images.to(device), labels.to(device)
@@ -111,22 +114,37 @@ def main():
 
             total_loss += loss.item()
 
+            
+            _, predicted = torch.max(outputs, 1)
+            train_total += labels.size(0)
+            train_correct += (predicted == labels).sum().item()
+
         avg_loss = total_loss / len(train_loader)
+        train_acc = train_correct / train_total
 
         
         model.eval()
         correct = 0
         total = 0
 
+        val_loss = 0
+
         with torch.no_grad():
             for images, labels in val_loader:
                 images, labels = images.to(device), labels.to(device)
+
                 outputs = model(images)
+                loss = criterion(outputs, labels)
+
+                val_loss += loss.item()
+
                 _, predicted = torch.max(outputs, 1)
                 total += labels.size(0)
                 correct += (predicted == labels).sum().item()
 
+        avg_val_loss = val_loss / len(val_loader)
         val_acc = correct / total
+
         scheduler.step(val_acc)
 
         
@@ -146,12 +164,19 @@ def main():
 
         wandb.log({
             "train_loss": avg_loss,
+            "train_accuracy": train_acc,
+            "val_loss": avg_val_loss,
             "val_accuracy": val_acc,
             "learning_rate": optimizer.param_groups[0]['lr'],
             "epoch": epoch
         })
 
-        print(f"Loss: {avg_loss:.4f} | Val Acc: {val_acc:.4f}")
+        print(
+            f"Train Loss: {avg_loss:.4f} | "
+            f"Train Acc: {train_acc:.4f} | "
+            f"Val Loss: {avg_val_loss:.4f} | "
+            f"Val Acc: {val_acc:.4f}"
+        )
 
     wandb.finish()
 
