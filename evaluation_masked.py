@@ -7,7 +7,7 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
-from model import get_model
+from model_vit import get_model
 
 
 def main():
@@ -42,7 +42,7 @@ def main():
 
     
     model.load_state_dict(
-        torch.load("best_model.pth", map_location=device, weights_only=True)
+        torch.load("best_model_vit.pth", map_location=device, weights_only=True)
     )
 
     model = model.to(device)
@@ -66,13 +66,13 @@ def main():
     all_labels = np.array(all_labels)
 
     overall_acc = accuracy_score(all_labels, all_preds)
-    print(f"\nOverall Test Accuracy (masked): {overall_acc:.4f}")
+    print(f"\nOverall Test Accuracy vit: {overall_acc:.4f}")
 
     cm = confusion_matrix(all_labels, all_preds)
     cm_percent = cm.astype(float) / cm.sum(axis=1, keepdims=True) * 100  
 
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(cm_percent, annot=True, fmt=".1f", cmap="Blues",
+    plt.figure(figsize=(4, 3))
+    sns.heatmap(cm_percent, annot=True, fmt=".1f", cmap="coolwarm",cbar=True,
                 xticklabels=class_names,
                 yticklabels=class_names)
 
@@ -80,8 +80,9 @@ def main():
     plt.ylabel("Actual")
     plt.title("Confusion Matrix")
     plt.tight_layout()
-    plt.savefig("confusion_matrix_masked.png")
-    plt.savefig("confusion_matrix.svg", format="svg", bbox_inches="tight")
+    plt.savefig("confusion_matrix_vit.png",dpi=300,
+    bbox_inches="tight")
+    # plt.savefig("confusion_matrix.svg", format="svg", bbox_inches="tight")
     plt.close()
 
     print("Confusion matrix saved as confusion_matrix_masked.png")
@@ -97,7 +98,7 @@ def main():
     print("\nClassification Report:\n")
     print(report)
 
-    with open("classification_report_masked.txt", "w") as f:
+    with open("classification_report_vit.txt", "w") as f:
         f.write(f"Overall Test Accuracy: {overall_acc:.4f}\n\n")
         f.write(report)
 

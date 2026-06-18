@@ -1,0 +1,11 @@
+Overall Test Accuracy: 0.9705
+
+              precision    recall  f1-score   support
+
+      benign     0.9699    0.9773    0.9736       132
+   malignant     0.9516    0.9365    0.9440        63
+      normal     1.0000    1.0000    1.0000        42
+
+    accuracy                         0.9705       237
+   macro avg     0.9738    0.9713    0.9725       237
+weighted avg     0.9704    0.9705    0.9704       237
